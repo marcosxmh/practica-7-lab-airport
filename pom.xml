@@ -5,6 +5,13 @@
     <artifactId>nlp-demo1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <properties>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${project.basedir}/report-aggregate/target/site/
+            jacoco-aggregate/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
+    </properties>
+    
     <dependencies>
         <dependency>
             <groupId>org.apache.opennlp</groupId>
