@@ -6,12 +6,12 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <sonar.coverage.jacoco.xmlReportPaths>
-            ${project.basedir}/report-aggregate/target/site/
-            jacoco-aggregate/jacoco.xml
-        </sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.opennlp</groupId>
@@ -34,7 +34,6 @@
     </dependencies>
 
     <build>
-
         <pluginManagement>
             <plugins>
                 <!-- Javadoc generation plugin -->
@@ -46,7 +45,6 @@
                         <show>private</show>
                         <nohelp>true</nohelp>
                         <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
-                        <show>public</show>
                     </configuration>
                 </plugin>
 
@@ -71,35 +69,35 @@
                     <version>3.9.1.2184</version>
                 </plugin>
 
-                <!-- Plugin for Cobertura code coverage -->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>cobertura-maven-plugin</artifactId>
-                    <version>2.7</version>
-                </plugin>
-
+                <!-- Plugin for JaCoCo code coverage -->
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.8</version>
                     <executions>
+                        <!-- Prepare JaCoCo for unit test coverage -->
                         <execution>
-                            <id>report-aggregate</id>
+                            <id>prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <!-- Generate the coverage report -->
+                        <execution>
+                            <id>report</id>
                             <phase>verify</phase>
                             <goals>
-                                <goal>report-aggregate</goal>
+                                <goal>report</goal>
                             </goals>
                         </execution>
                     </executions>
                 </plugin>
-
             </plugins>
         </pluginManagement>
     </build>
 
-
     <reporting>
         <plugins>
-
             <!-- Checkstyle reporting plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -134,7 +132,6 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-
         </plugins>
     </reporting>
 
