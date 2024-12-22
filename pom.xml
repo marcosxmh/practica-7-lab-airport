@@ -14,6 +14,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>marcosxmh</sonar.organization>
     </properties>
 
     <dependencies>
