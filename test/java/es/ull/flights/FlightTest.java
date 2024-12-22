@@ -47,4 +47,76 @@ class FlightTest {
         assertTrue(flight.removePassenger(passenger));
         assertEquals(0, flight.getNumberOfPassengers());
     }
+
+    @Test
+    void testRemovePassengerNotInFlight() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("P001", "John Doe", "US");
+
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerNull() {
+        Flight flight = new Flight("AB123", 2);
+
+        assertFalse(flight.removePassenger(null));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerEmpty() {
+        Flight flight = new Flight("AB123", 2);
+
+        assertFalse(flight.removePassenger(new Passenger("", "", "")));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerEmptyId() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("", "John Doe", "US");
+
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerEmptyName() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("P001", "", "US");
+
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerEmptyCountry() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("P001", "John Doe", "");
+
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerEmptyAll() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("", "", "");
+
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    void testRemovePassengerTwice() {
+        Flight flight = new Flight("AB123", 2);
+        Passenger passenger = new Passenger("P001", "John Doe", "US");
+
+        flight.addPassenger(passenger);
+        flight.removePassenger(passenger);
+        assertFalse(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
 }
