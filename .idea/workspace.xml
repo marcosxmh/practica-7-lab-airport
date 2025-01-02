@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21db7f6b-8e6b-4807-89df-088ba3ab7625" name="Changes" comment="Actualización pom.xml para coverage en SonarCloud">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,62 +46,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="21db7f6b-8e6b-4807-89df-088ba3ab7625" name="Changes" comment="" />
-      <created>1734902359743</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1734902359743</updated>
-      <workItem from="1734902363660" duration="3388000" />
-      <workItem from="1735811236632" duration="289000" />
-      <workItem from="1735811726827" duration="988000" />
-    </task>
-    <task id="LOCAL-00001" summary="Añade más tests para Flight y Passenger">
-      <option name="closed" value="true" />
-      <created>1734903007893</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1734903007893</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Actualización de documentación">
-      <option name="closed" value="true" />
-      <created>1734903787758</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1734903787758</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Actualización pom.xml para coverage en SonarCloud">
-      <option name="closed" value="true" />
-      <created>1734904395130</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1734904395130</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Añade más tests para Flight y Passenger" />
-    <MESSAGE value="Actualización de documentación" />
-    <MESSAGE value="Actualización pom.xml para coverage en SonarCloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización pom.xml para coverage en SonarCloud" />
-  </component>
   <component name="RunManager" selected="JUnit.FlightPassengerTest">
     <configuration name="FlightPassengerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Airport" />
@@ -178,5 +122,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Añade más tests para Flight y Passenger" />
+    <MESSAGE value="Actualización de documentación" />
+    <MESSAGE value="Actualización pom.xml para coverage en SonarCloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización pom.xml para coverage en SonarCloud" />
   </component>
 </project>
